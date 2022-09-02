@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  height: auto;
+  background-color: black;
+  user-select: none;
+}
+#display-area {
+  width: 100%;
+  height: 100px;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, minmax(40px, auto));
+  background-color: black;
+  word-wrap: break-word;
+  padding-bottom: 20px;
+  border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
+}
+#display-area .currentInput {
+  text-align: right;
+  height: 8vh;
+  color: white;
+  font-size: xx-large;
+  line-height: 2;
+  word-wrap: break-word;
+}
+
+#display-area .answerInput {
+  text-align: right;
+  color: rgba(150, 150, 150, 0.87);
+  height: 7px;
+  line-height: 3;
+  font-size: larger;
+}
+.container .keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
