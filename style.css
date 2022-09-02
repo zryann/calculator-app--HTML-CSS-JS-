@@ -10,8 +10,10 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 300px;
+  padding: 25px 35px;
   height: auto;
-  background-color: black;
+  border-radius: 30px;
+  background-color: #1c1c1c;
   user-select: none;
 }
 #display-area {
@@ -19,10 +21,8 @@ body {
   height: 100px;
   grid-template-columns: 100%;
   grid-template-rows: repeat(2, minmax(40px, auto));
-  background-color: black;
   word-wrap: break-word;
-  padding-bottom: 20px;
-  border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
+  padding-bottom: 40px;
 }
 #display-area .currentInput {
   text-align: right;
@@ -42,6 +42,33 @@ body {
 }
 .container .keypad {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 70px);
+  grid-gap: 18px;
+}
+.container .keypad button {
+  outline: none;
+  border: none;
+  border-radius: 122px;
+  font-size: x-large;
+  color: white;
+  background-color: #505050;
+  transition: filter 0.3s;
+}
+.container .keypad .grey {
+  color: black;
+  background-color: #d4d4d2;
+}
+.container .keypad .orange {
+  background-color: #ff9500;
+}
+.container .keypad .zero {
+  grid-column: 1 / span 2;
+  border-radius: 55px;
+  text-align: left;
+  padding-left: 25px;
+}
+.button:active,
+.button:focus {
+  filter: brightness(120%);
 }
